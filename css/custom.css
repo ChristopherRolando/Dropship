@@ -1,0 +1,367 @@
+ body {
+     background: #fffae6;
+ }
+ .paymenrser p{
+    color: #ababab;
+    font-size: 14px;
+ }
+ .paymenrser select{
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    font-size: 14px;
+    width: 58%;
+    height: 40px;
+ }
+.mainarea{
+    background: #fff;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.border_title{
+    color: #fd8a1f;
+    text-align: left;
+    font-weight: bold;
+    font-size: 34px;
+    position: relative;
+    z-index: 999;
+    display: inline-block;
+}
+.border_title:after{
+    border-bottom: 5px solid #eeeeee;
+    content: "";
+    position: absolute;
+    width: 110%;
+    left: 0px;
+    bottom: 5px;
+    z-index: -1;
+}
+.sendadsi{
+    text-align: right;
+    color: #9c9ba4;
+    font-size: 18px;
+    position: absolute;
+    right: 0px;
+    top: 14px;
+}
+#regForm{
+  position: relative;
+}
+.sidebar{
+    border-left: 1px solid #e8e1d8;
+    padding-left: 25px;
+}
+.sendadsi  label{
+  padding-left: 8px;
+  font-size: 14px;
+}
+tbody, td, tfoot, th, thead, tr{
+  border: none;
+}
+.tab input{
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.tab textarea{
+    border: 1px solid #eee;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.sidebar h1{
+    color: #ff8c1f;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.sidebar p{
+    color: #ababab;
+    font-size: 14px;
+}
+.finaltotal td{
+    color: #ababab;
+    font-size: 14px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.finaltotal td b{
+    color: #000;
+    text-align: right;
+    display: block;
+}
+.fins{
+    text-align: right;
+    display: block;
+}
+.finaltotal .total td{
+    color: #ff8c1f;
+}
+.finaltotal .total td h6{
+    font-size: 24px;
+
+}
+#nextprevious button{
+    background: #ff8c1f;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+}
+.finaltotal{
+    margin-top: 20%;
+}
+
+ .step b {
+    margin: 0 2px;
+    background-color: #ffe4b8;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 2px 9px;
+    font-size: 14px;
+    color: #ff8c1f;
+    font-weight: 600;
+ }
+
+ .step.active {
+    opacity: 1
+ }
+ .step{
+    color: #feb558;
+    font-size: 14px;
+    font-weight: bold;
+ }
+ .step.finish b {
+    background-color: #ff8c1f;
+    color: #fff;
+ }
+.iconsd{
+padding-left: 13px;
+    padding-right: 10px;
+    color: #feb558;
+    font-weight: 900;
+}
+.all-steps {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #fffae6;
+    position: relative;
+    top: 21px;
+    z-index: 9999;
+    width: 40%;
+    margin: auto;
+    border-radius: 29px;
+    padding-bottom: 19px;
+}
+.valid-feedback.feedback-icon,
+.invalid-feedback.feedback-icon {
+ position: absolute;
+    width: auto;
+    top: 6px;
+    right: 27px;
+    margin-top: 0;
+}
+.tab1 .col-md-6{
+    position: relative;
+}
+.tab .fa-times{
+    color: #fd8a1f;
+
+}
+input.invalid {
+    border: 1px solid #fd8a1f;
+ }
+
+
+ul.chec-radio {
+    margin: 0;
+    padding: 0px;
+}
+ul.chec-radio li.pz {
+    display: inline;
+}
+.chec-radio .radio-inline .clab {
+    cursor: pointer;
+    padding: 7px 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #333;
+    position: relative;
+    float: left;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    width: 244px;
+    border: 1px solid #eee;
+    height: 60px;
+}
+
+.chec-radio label.radio-inline input[type="radio"] {
+    display: none;
+}
+.chec-radio label.radio-inline input[type="radio"]:checked+div {
+    background-color: #e8fbf1;
+    border: 1px solid #5ee4a0;
+}
+.chec-radio label.radio-inline input[type="radio"]:checked+div:after {
+    margin-right: 5px;
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-family: var(--fa-style-family,"Font Awesome 6 Free");
+    font-weight: 900;
+    font-weight: var(--fa-style,900);
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    color: #5ee4a0;
+    font-size: 18px;
+}
+.sidebar .devest{
+    color: #000;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+.sidebar .devest span{
+  color: #5ee4a1;
+}
+#paymentblock{
+  display: none;
+}
+
+
+ input {
+     padding: 10px;
+     width: 100%;
+     font-size: 17px;
+ }
+
+ input.invalid {
+     border: 1px solid #fd8a1f;
+ }
+
+ .tab {
+     display: none
+ }
+
+ button {
+     background-color: #4CAF50;
+     color: #ffffff;
+     border: none;
+     padding: 10px 20px;
+     font-size: 17px;
+     font-family: Raleway;
+     cursor: pointer
+ }
+
+ button:hover {
+     opacity: 0.8
+ }
+
+ #prevBtn {
+     background-color: #bbbbbb
+ }
+
+
+
+ .thanks-message {
+     display: none
+ }
+
+ .container {
+     display: block;
+     position: relative;
+     padding-left: 35px;
+     margin-bottom: 12px;
+     cursor: pointer;
+     font-size: 22px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none
+ }
+
+ .container input[type="radio"] {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer
+ }
+
+ .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 25px;
+     width: 25px;
+     background-color: #eee;
+     border-radius: 50%
+ }
+
+ .container:hover input~.checkmark {
+     background-color: #ccc
+ }
+
+ .container input:checked~.checkmark {
+     background-color: #2196F3
+ }
+
+ .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none
+ }
+
+ .container input:checked~.checkmark:after {
+     display: block
+ }
+
+ .container .checkmark:after {
+     top: 9px;
+     left: 9px;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: white
+ }
+ .devest{
+    display: none;
+ }
+ #shippayment{
+    display: none;
+ }
+ .tabpay{
+    margin-top: 50px;
+ }
+ .nwcart{
+    text-align: left;
+    color: #ababab;
+    background: none !important;
+    font-size: 14px;
+ }
+ .thankyou{
+    padding-left: 26%;
+    padding-top: 10%;
+ }
+ .thankyou p{
+    font-size: 14px;
+    color: #ababab;
+    padding-left: 10px;
+ }
+ .thankyou h5{
+    padding-left: 10px;
+    font-size: 18px;
+ }
+ .thankyou a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #ababab;
+ }
+ #the-count{
+    font-weight: normal;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #ababab;
+    text-align: right;
+ }

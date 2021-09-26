@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+<body>
+<div class="container mt-5" id="app">
+  <div class="row d-flex ">
+    <div class="all-steps" id="all-steps"> 
+      <span class="step"><b>1</b> Delivery <span class="iconsd"> > </span></span> <span class="step"><b>2</b> Payment <span class="iconsd"> > </span></span> <span class="step"><b>3</b> Finish </span> 
+    </div>
+    <div class="mainarea row"> 
+      <div class="col-md-8">
+        <form id="regForm">
+          <div id="nextprevious">
+            <div> <button class="nwcart" type="button" id="prevBtn" onclick="nextPrev(-1)"> <i class="fas fa-arrow-left"></i>  Back to delivery</button> </div>
+          </div>
+          <div class="tab tab1">
+            <table class="table">
+              <tr>
+                <td><h1 id="register" class="border_title">Delivery Details</h1></td>
+              </tr>
+            </table>
+             <div class="sendadsi">
+                <input style="width:auto;" type="checkbox" id="checkbox" name="vehicle1" value="Bike" checked="true"><label for="vehicle1"> Send as dropshipper</label>
+             </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="email" name="emailaddress" placeholder="Email"  required="">
+                    <div class="valid-feedback feedback-icon">
+                      <i class="fa fa-check"></i>
+                    </div>
+                    <div class="invalid-feedback feedback-icon">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div id="removethedrop">
+                    <input type="text" name="dropshippername" id="dropshippername" placeholder="Dropshipper name" required="required">
+                      <div class="valid-feedback feedback-icon">
+                        <i class="fa fa-check"></i>
+                      </div>
+                      <div class="invalid-feedback feedback-icon">
+                        <i class="fa fa-times"></i>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div id="delivery">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input type="number" name="phonenumber"  placeholder="Phone Number" required="required">
+                    <div class="valid-feedback feedback-icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="invalid-feedback feedback-icon">
+                        <i class="fa fa-times"></i>
+                    </div>
+                  </div>
+                   <div class="col-md-6">
+                    <div id="removethedrop1">
+                    <input type="number" id="dropshipperphonenumber" name="dropshipperphonenumber" required="required" placeholder="Dropshipper Phone Number" >
+                      <div class="valid-feedback feedback-icon">
+                        <i class="fa fa-check"></i>
+                      </div>
+                      <div class="invalid-feedback feedback-icon">
+                        <i class="fa fa-times"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="rows">
+                <div class="col-md-6" id="delicershipemnt">
+                  <textarea placeholder="Delivery Address" rows="3"></textarea>
+                  <div id="the-count">
+                    <span id="current">0</span>
+                    <span id="maximum">/ 120</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="tab">
+            <table class="table">
+              <tr>
+                <td><h1 id="register" class="border_title">Shipment</h1></td>
+              </tr>
+            </table>
+            <ul class="chec-radio">
+              <li class="pz">
+                <label class="radio-inline">
+                  <input type="radio" checked ="" id="pro-chx-residential" name="property_type" v-model="search" class="pro-chx" value="Go-SEND">
+                  <div class="clab">GO-SEND<br>15,00</div>
+                </label>
+              </li>
+              <li class="pz">
+                <label class="radio-inline">
+                  <input type="radio" id="pro-chx-commercial" name="property_type" v-model="search" class="pro-chx" value="JNE">
+                  <div class="clab">JNE<br>9,000</div>
+                </label>
+              </li>
+              <li class="pz">
+                <label class="radio-inline">
+                  <input type="radio" id="pro-chx-open" name="property_type" v-model="search" class="pro-chx" value="Personal Courier">
+                  <div class="clab">Personal Courier<br>29,000</div>
+                </label>
+              </li>
+            </ul>
+            <table class="table tabpay">
+              <tr>
+                <td><h1 id="register" class="border_title">Payment</h1></td>
+              </tr>
+            </table>
+            <ul class="chec-radio">
+                <li class="pz">
+                  <label class="radio-inline">
+                    <input type="radio" checked id="pro-chx-residential" name="bankdetails" v-model="payment" onclick="show1();" class="pro-chx" value="E-Wallet">
+                    <div class="clab">e-Wallet<br>1,500,000 left</div>
+                  </label>
+                </li>
+                <li class="pz">
+                  <label class="radio-inline">
+                    <input type="radio" id="pro-chx-commercial" name="bankdetails" v-model="payment" onclick="show2();" class="pro-chx" value="Bank Tranfer" >
+                    <div class="clab">Bank Transfer </div>
+                  </label>
+                </li>
+                <li class="pz">
+                  <label class="radio-inline">
+                    <input type="radio" id="pro-chx-open" name="bankdetails" v-model="payment" onclick="show1();" class="pro-chx" value="Virtual Account">
+                    <div class="clab">Virtual Account</div>
+                  </label>
+                </li>
+              </ul>
+          </div>
+          <div class="tab">
+            <div class="thankyou">
+              <table class="table">
+                <tr>
+                  <td><h1 id="register" class="border_title">Thank you</h1></td>
+                </tr>
+              </table>
+              <h5>Order ID: <span id="output"></span></h5>
+              <p>Your order will be delivered today with {{ search}}</p>
+              <a href="index.html"><i class="fas fa-arrow-left"></i> Go to homepage</a>
+            </div>
+          </div>          
+        </form>
+      </div>
+
+        <div class="col-md-4">
+          <div class="sidebar">
+              <h1>Summary</h1>
+              <p>10 items purchased
+              <p class="devest" id="delest">Delivery estimation<br>
+              <span>today by {{ search}}  </span></p>
+              <table class="table finaltotal">
+              <tr>
+              <td>Cost of goods</td>
+              <td><b>500,000</b></td>
+              </tr>
+              <tr>
+              <td>Dropshipping Fee</td>
+              <td><b>5,900</b></td>
+              </tr>
+              <tr id="shippayment">
+              <td ><b style="display: inline-block;">{{ search}}</b>  shipment</td>
+              <td><b>15,000</b></td>
+              </tr>
+              <tr class="total">
+                <td><h6>Total</h6></td>
+                <td><h6 class="fins">505,900</h6></td>
+              </tr>
+              </table>
+              <div id="nextprevious">
+                <div> <button type="button" id="nextBtn" onclick="nextPrev(1)">Continue to Payment  {{ payment}} </button>  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
